@@ -6,3 +6,10 @@
 #
 # Pods/
 
+**/.DS_Store
+**/xcuserdata/
+**/project.xcworkspace/
+**/*.xccheckout
+**/build/
+**/*~.nib
+*.swp

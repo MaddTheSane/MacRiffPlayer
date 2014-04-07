@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55BC6EB718F3307F008B7E12 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EB618F3307F008B7E12 /* Cocoa.framework */; };
+		55BC6EC118F3307F008B7E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EBF18F3307F008B7E12 /* InfoPlist.strings */; };
+		55BC6EC318F3307F008B7E12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EC218F3307F008B7E12 /* main.m */; };
+		55BC6EC718F3307F008B7E12 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EC518F3307F008B7E12 /* Credits.rtf */; };
+		55BC6ECA18F3307F008B7E12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EC918F3307F008B7E12 /* AppDelegate.m */; };
+		55BC6ECD18F3307F008B7E12 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6ECB18F3307F008B7E12 /* MainMenu.xib */; };
+		55BC6ECF18F3307F008B7E12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6ECE18F3307F008B7E12 /* Images.xcassets */; };
+		55BC6ED618F3307F008B7E12 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6ED518F3307F008B7E12 /* XCTest.framework */; };
+		55BC6ED718F3307F008B7E12 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EB618F3307F008B7E12 /* Cocoa.framework */; };
+		55BC6EDF18F3307F008B7E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EDD18F3307F008B7E12 /* InfoPlist.strings */; };
+		55BC6EE118F3307F008B7E12 /* MacRiffPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EE018F3307F008B7E12 /* MacRiffPlayerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55BC6ED818F3307F008B7E12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55BC6EAB18F3307F008B7E12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55BC6EB218F3307F008B7E12;
+			remoteInfo = MacRiffPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55BC6EB318F3307F008B7E12 /* MacRiffPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRiffPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55BC6EB618F3307F008B7E12 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		55BC6EB918F3307F008B7E12 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		55BC6EBA18F3307F008B7E12 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		55BC6EBB18F3307F008B7E12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55BC6EBE18F3307F008B7E12 /* MacRiffPlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacRiffPlayer-Info.plist"; sourceTree = "<group>"; };
+		55BC6EC018F3307F008B7E12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55BC6EC218F3307F008B7E12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55BC6EC418F3307F008B7E12 /* MacRiffPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacRiffPlayer-Prefix.pch"; sourceTree = "<group>"; };
+		55BC6EC618F3307F008B7E12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		55BC6EC818F3307F008B7E12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55BC6EC918F3307F008B7E12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55BC6ECC18F3307F008B7E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		55BC6ECE18F3307F008B7E12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55BC6ED418F3307F008B7E12 /* MacRiffPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacRiffPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55BC6ED518F3307F008B7E12 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		55BC6EDC18F3307F008B7E12 /* MacRiffPlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacRiffPlayerTests-Info.plist"; sourceTree = "<group>"; };
+		55BC6EDE18F3307F008B7E12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55BC6EE018F3307F008B7E12 /* MacRiffPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacRiffPlayerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55BC6EB018F3307F008B7E12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BC6EB718F3307F008B7E12 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55BC6ED118F3307F008B7E12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BC6ED718F3307F008B7E12 /* Cocoa.framework in Frameworks */,
+				55BC6ED618F3307F008B7E12 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55BC6EAA18F3307F008B7E12 = {
+			isa = PBXGroup;
+			children = (
+				55BC6EBC18F3307F008B7E12 /* MacRiffPlayer */,
+				55BC6EDA18F3307F008B7E12 /* MacRiffPlayerTests */,
+				55BC6EB518F3307F008B7E12 /* Frameworks */,
+				55BC6EB418F3307F008B7E12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55BC6EB418F3307F008B7E12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55BC6EB318F3307F008B7E12 /* MacRiffPlayer.app */,
+				55BC6ED418F3307F008B7E12 /* MacRiffPlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55BC6EB518F3307F008B7E12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55BC6EB618F3307F008B7E12 /* Cocoa.framework */,
+				55BC6ED518F3307F008B7E12 /* XCTest.framework */,
+				55BC6EB818F3307F008B7E12 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55BC6EB818F3307F008B7E12 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55BC6EB918F3307F008B7E12 /* AppKit.framework */,
+				55BC6EBA18F3307F008B7E12 /* CoreData.framework */,
+				55BC6EBB18F3307F008B7E12 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		55BC6EBC18F3307F008B7E12 /* MacRiffPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				55BC6EC818F3307F008B7E12 /* AppDelegate.h */,
+				55BC6EC918F3307F008B7E12 /* AppDelegate.m */,
+				55BC6ECB18F3307F008B7E12 /* MainMenu.xib */,
+				55BC6ECE18F3307F008B7E12 /* Images.xcassets */,
+				55BC6EBD18F3307F008B7E12 /* Supporting Files */,
+			);
+			path = MacRiffPlayer;
+			sourceTree = "<group>";
+		};
+		55BC6EBD18F3307F008B7E12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55BC6EBE18F3307F008B7E12 /* MacRiffPlayer-Info.plist */,
+				55BC6EBF18F3307F008B7E12 /* InfoPlist.strings */,
+				55BC6EC218F3307F008B7E12 /* main.m */,
+				55BC6EC418F3307F008B7E12 /* MacRiffPlayer-Prefix.pch */,
+				55BC6EC518F3307F008B7E12 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55BC6EDA18F3307F008B7E12 /* MacRiffPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				55BC6EE018F3307F008B7E12 /* MacRiffPlayerTests.m */,
+				55BC6EDB18F3307F008B7E12 /* Supporting Files */,
+			);
+			path = MacRiffPlayerTests;
+			sourceTree = "<group>";
+		};
+		55BC6EDB18F3307F008B7E12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55BC6EDC18F3307F008B7E12 /* MacRiffPlayerTests-Info.plist */,
+				55BC6EDD18F3307F008B7E12 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55BC6EB218F3307F008B7E12 /* MacRiffPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55BC6EE418F3307F008B7E12 /* Build configuration list for PBXNativeTarget "MacRiffPlayer" */;
+			buildPhases = (
+				55BC6EAF18F3307F008B7E12 /* Sources */,
+				55BC6EB018F3307F008B7E12 /* Frameworks */,
+				55BC6EB118F3307F008B7E12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacRiffPlayer;
+			productName = MacRiffPlayer;
+			productReference = 55BC6EB318F3307F008B7E12 /* MacRiffPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55BC6ED318F3307F008B7E12 /* MacRiffPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55BC6EE718F3307F008B7E12 /* Build configuration list for PBXNativeTarget "MacRiffPlayerTests" */;
+			buildPhases = (
+				55BC6ED018F3307F008B7E12 /* Sources */,
+				55BC6ED118F3307F008B7E12 /* Frameworks */,
+				55BC6ED218F3307F008B7E12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55BC6ED918F3307F008B7E12 /* PBXTargetDependency */,
+			);
+			name = MacRiffPlayerTests;
+			productName = MacRiffPlayerTests;
+			productReference = 55BC6ED418F3307F008B7E12 /* MacRiffPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55BC6EAB18F3307F008B7E12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "C.W. Betts";
+				TargetAttributes = {
+					55BC6ED318F3307F008B7E12 = {
+						TestTargetID = 55BC6EB218F3307F008B7E12;
+					};
+				};
+			};
+			buildConfigurationList = 55BC6EAE18F3307F008B7E12 /* Build configuration list for PBXProject "MacRiffPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55BC6EAA18F3307F008B7E12;
+			productRefGroup = 55BC6EB418F3307F008B7E12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55BC6EB218F3307F008B7E12 /* MacRiffPlayer */,
+				55BC6ED318F3307F008B7E12 /* MacRiffPlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55BC6EB118F3307F008B7E12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BC6EC118F3307F008B7E12 /* InfoPlist.strings in Resources */,
+				55BC6ECF18F3307F008B7E12 /* Images.xcassets in Resources */,
+				55BC6EC718F3307F008B7E12 /* Credits.rtf in Resources */,
+				55BC6ECD18F3307F008B7E12 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55BC6ED218F3307F008B7E12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BC6EDF18F3307F008B7E12 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55BC6EAF18F3307F008B7E12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BC6ECA18F3307F008B7E12 /* AppDelegate.m in Sources */,
+				55BC6EC318F3307F008B7E12 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55BC6ED018F3307F008B7E12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BC6EE118F3307F008B7E12 /* MacRiffPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55BC6ED918F3307F008B7E12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55BC6EB218F3307F008B7E12 /* MacRiffPlayer */;
+			targetProxy = 55BC6ED818F3307F008B7E12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55BC6EBF18F3307F008B7E12 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55BC6EC018F3307F008B7E12 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		55BC6EC518F3307F008B7E12 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55BC6EC618F3307F008B7E12 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		55BC6ECB18F3307F008B7E12 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55BC6ECC18F3307F008B7E12 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		55BC6EDD18F3307F008B7E12 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55BC6EDE18F3307F008B7E12 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55BC6EE218F3307F008B7E12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		55BC6EE318F3307F008B7E12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		55BC6EE518F3307F008B7E12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacRiffPlayer/MacRiffPlayer-Prefix.pch";
+				INFOPLIST_FILE = "MacRiffPlayer/MacRiffPlayer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		55BC6EE618F3307F008B7E12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacRiffPlayer/MacRiffPlayer-Prefix.pch";
+				INFOPLIST_FILE = "MacRiffPlayer/MacRiffPlayer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		55BC6EE818F3307F008B7E12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacRiffPlayer.app/Contents/MacOS/MacRiffPlayer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacRiffPlayer/MacRiffPlayer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MacRiffPlayerTests/MacRiffPlayerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		55BC6EE918F3307F008B7E12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacRiffPlayer.app/Contents/MacOS/MacRiffPlayer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacRiffPlayer/MacRiffPlayer-Prefix.pch";
+				INFOPLIST_FILE = "MacRiffPlayerTests/MacRiffPlayerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55BC6EAE18F3307F008B7E12 /* Build configuration list for PBXProject "MacRiffPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55BC6EE218F3307F008B7E12 /* Debug */,
+				55BC6EE318F3307F008B7E12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55BC6EE418F3307F008B7E12 /* Build configuration list for PBXNativeTarget "MacRiffPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55BC6EE518F3307F008B7E12 /* Debug */,
+				55BC6EE618F3307F008B7E12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55BC6EE718F3307F008B7E12 /* Build configuration list for PBXNativeTarget "MacRiffPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55BC6EE818F3307F008B7E12 /* Debug */,
+				55BC6EE918F3307F008B7E12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55BC6EAB18F3307F008B7E12 /* Project object */;
+}
