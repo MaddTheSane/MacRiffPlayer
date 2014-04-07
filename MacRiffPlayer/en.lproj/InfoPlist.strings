@@ -1,2 +1,5 @@
 /* Localized versions of Info.plist keys */
 
+CFBundleName = "RiffTrax DVD Player";
+"MP3" = "MPEG 1 Layer III audio";
+"Sync" = "RiffTrax Sync Document";
