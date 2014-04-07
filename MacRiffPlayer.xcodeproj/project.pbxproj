@@ -18,6 +18,20 @@
 		55BC6ED718F3307F008B7E12 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EB618F3307F008B7E12 /* Cocoa.framework */; };
 		55BC6EDF18F3307F008B7E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EDD18F3307F008B7E12 /* InfoPlist.strings */; };
 		55BC6EE118F3307F008B7E12 /* MacRiffPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EE018F3307F008B7E12 /* MacRiffPlayerTests.m */; };
+		55BC6EEE18F3319A008B7E12 /* RiffObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EEB18F3319A008B7E12 /* RiffObject.m */; };
+		55BC6EEF18F3319A008B7E12 /* RiffSyncObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EED18F3319A008B7E12 /* RiffSyncObject.m */; };
+		55BC6EF118F331B1008B7E12 /* DVDPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EF018F331B1008B7E12 /* DVDPlayback.framework */; };
+		55BC6EF318F331B9008B7E12 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EF218F331B9008B7E12 /* AVFoundation.framework */; };
+		55BC6EFE18F331F2008B7E12 /* CameraTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EF418F331F2008B7E12 /* CameraTemplate.pdf */; };
+		55BC6EFF18F331F2008B7E12 /* EjectTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EF518F331F2008B7E12 /* EjectTemplate.pdf */; };
+		55BC6F0018F331F2008B7E12 /* ForwardTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EF618F331F2008B7E12 /* ForwardTemplate.pdf */; };
+		55BC6F0118F331F2008B7E12 /* MenuTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EF718F331F2008B7E12 /* MenuTemplate.pdf */; };
+		55BC6F0218F331F2008B7E12 /* NextTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EF818F331F2008B7E12 /* NextTemplate.pdf */; };
+		55BC6F0318F331F2008B7E12 /* PauseTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EF918F331F2008B7E12 /* PauseTemplate.pdf */; };
+		55BC6F0418F331F2008B7E12 /* PlayTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EFA18F331F2008B7E12 /* PlayTemplate.pdf */; };
+		55BC6F0518F331F2008B7E12 /* PreviousTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EFB18F331F2008B7E12 /* PreviousTemplate.pdf */; };
+		55BC6F0618F331F2008B7E12 /* ReverseTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EFC18F331F2008B7E12 /* ReverseTemplate.pdf */; };
+		55BC6F0718F331F2008B7E12 /* StopTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EFD18F331F2008B7E12 /* StopTemplate.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +64,22 @@
 		55BC6EDC18F3307F008B7E12 /* MacRiffPlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacRiffPlayerTests-Info.plist"; sourceTree = "<group>"; };
 		55BC6EDE18F3307F008B7E12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55BC6EE018F3307F008B7E12 /* MacRiffPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacRiffPlayerTests.m; sourceTree = "<group>"; };
+		55BC6EEA18F3319A008B7E12 /* RiffObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiffObject.h; sourceTree = "<group>"; };
+		55BC6EEB18F3319A008B7E12 /* RiffObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiffObject.m; sourceTree = "<group>"; };
+		55BC6EEC18F3319A008B7E12 /* RiffSyncObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiffSyncObject.h; sourceTree = "<group>"; };
+		55BC6EED18F3319A008B7E12 /* RiffSyncObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiffSyncObject.m; sourceTree = "<group>"; };
+		55BC6EF018F331B1008B7E12 /* DVDPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVDPlayback.framework; path = System/Library/Frameworks/DVDPlayback.framework; sourceTree = SDKROOT; };
+		55BC6EF218F331B9008B7E12 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		55BC6EF418F331F2008B7E12 /* CameraTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CameraTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EF518F331F2008B7E12 /* EjectTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = EjectTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EF618F331F2008B7E12 /* ForwardTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ForwardTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EF718F331F2008B7E12 /* MenuTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MenuTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EF818F331F2008B7E12 /* NextTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = NextTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EF918F331F2008B7E12 /* PauseTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PauseTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EFA18F331F2008B7E12 /* PlayTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PlayTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EFB18F331F2008B7E12 /* PreviousTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PreviousTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EFC18F331F2008B7E12 /* ReverseTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ReverseTemplate.pdf; sourceTree = "<group>"; };
+		55BC6EFD18F331F2008B7E12 /* StopTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = StopTemplate.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BC6EF118F331B1008B7E12 /* DVDPlayback.framework in Frameworks */,
 				55BC6EB718F3307F008B7E12 /* Cocoa.framework in Frameworks */,
+				55BC6EF318F331B9008B7E12 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +127,8 @@
 		55BC6EB518F3307F008B7E12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55BC6EF218F331B9008B7E12 /* AVFoundation.framework */,
+				55BC6EF018F331B1008B7E12 /* DVDPlayback.framework */,
 				55BC6EB618F3307F008B7E12 /* Cocoa.framework */,
 				55BC6ED518F3307F008B7E12 /* XCTest.framework */,
 				55BC6EB818F3307F008B7E12 /* Other Frameworks */,
@@ -117,6 +151,10 @@
 			children = (
 				55BC6EC818F3307F008B7E12 /* AppDelegate.h */,
 				55BC6EC918F3307F008B7E12 /* AppDelegate.m */,
+				55BC6EEA18F3319A008B7E12 /* RiffObject.h */,
+				55BC6EEB18F3319A008B7E12 /* RiffObject.m */,
+				55BC6EEC18F3319A008B7E12 /* RiffSyncObject.h */,
+				55BC6EED18F3319A008B7E12 /* RiffSyncObject.m */,
 				55BC6ECB18F3307F008B7E12 /* MainMenu.xib */,
 				55BC6ECE18F3307F008B7E12 /* Images.xcassets */,
 				55BC6EBD18F3307F008B7E12 /* Supporting Files */,
@@ -132,6 +170,16 @@
 				55BC6EC218F3307F008B7E12 /* main.m */,
 				55BC6EC418F3307F008B7E12 /* MacRiffPlayer-Prefix.pch */,
 				55BC6EC518F3307F008B7E12 /* Credits.rtf */,
+				55BC6EF418F331F2008B7E12 /* CameraTemplate.pdf */,
+				55BC6EF518F331F2008B7E12 /* EjectTemplate.pdf */,
+				55BC6EF618F331F2008B7E12 /* ForwardTemplate.pdf */,
+				55BC6EF718F331F2008B7E12 /* MenuTemplate.pdf */,
+				55BC6EF818F331F2008B7E12 /* NextTemplate.pdf */,
+				55BC6EF918F331F2008B7E12 /* PauseTemplate.pdf */,
+				55BC6EFA18F331F2008B7E12 /* PlayTemplate.pdf */,
+				55BC6EFB18F331F2008B7E12 /* PreviousTemplate.pdf */,
+				55BC6EFC18F331F2008B7E12 /* ReverseTemplate.pdf */,
+				55BC6EFD18F331F2008B7E12 /* StopTemplate.pdf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -230,10 +278,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BC6F0418F331F2008B7E12 /* PlayTemplate.pdf in Resources */,
+				55BC6F0618F331F2008B7E12 /* ReverseTemplate.pdf in Resources */,
+				55BC6F0718F331F2008B7E12 /* StopTemplate.pdf in Resources */,
+				55BC6F0518F331F2008B7E12 /* PreviousTemplate.pdf in Resources */,
 				55BC6EC118F3307F008B7E12 /* InfoPlist.strings in Resources */,
+				55BC6F0218F331F2008B7E12 /* NextTemplate.pdf in Resources */,
+				55BC6F0118F331F2008B7E12 /* MenuTemplate.pdf in Resources */,
 				55BC6ECF18F3307F008B7E12 /* Images.xcassets in Resources */,
+				55BC6EFF18F331F2008B7E12 /* EjectTemplate.pdf in Resources */,
+				55BC6F0018F331F2008B7E12 /* ForwardTemplate.pdf in Resources */,
 				55BC6EC718F3307F008B7E12 /* Credits.rtf in Resources */,
 				55BC6ECD18F3307F008B7E12 /* MainMenu.xib in Resources */,
+				55BC6EFE18F331F2008B7E12 /* CameraTemplate.pdf in Resources */,
+				55BC6F0318F331F2008B7E12 /* PauseTemplate.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BC6EEE18F3319A008B7E12 /* RiffObject.m in Sources */,
 				55BC6ECA18F3307F008B7E12 /* AppDelegate.m in Sources */,
+				55BC6EEF18F3319A008B7E12 /* RiffSyncObject.m in Sources */,
 				55BC6EC318F3307F008B7E12 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +445,7 @@
 		55BC6EE518F3307F008B7E12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = RiffApp;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MacRiffPlayer/MacRiffPlayer-Prefix.pch";
@@ -398,7 +458,7 @@
 		55BC6EE618F3307F008B7E12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = RiffApp;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MacRiffPlayer/MacRiffPlayer-Prefix.pch";
