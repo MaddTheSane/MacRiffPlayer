@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5540D3C71AC270F0002B7FCD /* RiffObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540D3C61AC270F0002B7FCD /* RiffObject.swift */; };
+		5540D3C91AC2712C002B7FCD /* RiffSyncController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540D3C81AC2712C002B7FCD /* RiffSyncController.swift */; };
+		5540D3CB1AC31812002B7FCD /* DVDSwiftBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540D3CA1AC31812002B7FCD /* DVDSwiftBridge.swift */; };
 		55BC6EB718F3307F008B7E12 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EB618F3307F008B7E12 /* Cocoa.framework */; };
 		55BC6EC118F3307F008B7E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EBF18F3307F008B7E12 /* InfoPlist.strings */; };
 		55BC6EC318F3307F008B7E12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EC218F3307F008B7E12 /* main.m */; };
@@ -19,7 +22,6 @@
 		55BC6EDF18F3307F008B7E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EDD18F3307F008B7E12 /* InfoPlist.strings */; };
 		55BC6EE118F3307F008B7E12 /* MacRiffPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EE018F3307F008B7E12 /* MacRiffPlayerTests.m */; };
 		55BC6EEE18F3319A008B7E12 /* RiffObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EEB18F3319A008B7E12 /* RiffObject.m */; };
-		55BC6EEF18F3319A008B7E12 /* RiffSyncObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EED18F3319A008B7E12 /* RiffSyncObject.m */; };
 		55BC6EF118F331B1008B7E12 /* DVDPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EF018F331B1008B7E12 /* DVDPlayback.framework */; };
 		55BC6EF318F331B9008B7E12 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EF218F331B9008B7E12 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5540D3C51AC270EF002B7FCD /* MacRiffPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacRiffPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		5540D3C61AC270F0002B7FCD /* RiffObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffObject.swift; sourceTree = "<group>"; };
+		5540D3C81AC2712C002B7FCD /* RiffSyncController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffSyncController.swift; sourceTree = "<group>"; };
+		5540D3CA1AC31812002B7FCD /* DVDSwiftBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDSwiftBridge.swift; sourceTree = "<group>"; };
 		55BC6EB318F3307F008B7E12 /* MacRiffPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRiffPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BC6EB618F3307F008B7E12 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		55BC6EB918F3307F008B7E12 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -56,8 +62,6 @@
 		55BC6EE018F3307F008B7E12 /* MacRiffPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacRiffPlayerTests.m; sourceTree = "<group>"; };
 		55BC6EEA18F3319A008B7E12 /* RiffObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiffObject.h; sourceTree = "<group>"; };
 		55BC6EEB18F3319A008B7E12 /* RiffObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiffObject.m; sourceTree = "<group>"; };
-		55BC6EEC18F3319A008B7E12 /* RiffSyncObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiffSyncObject.h; sourceTree = "<group>"; };
-		55BC6EED18F3319A008B7E12 /* RiffSyncObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiffSyncObject.m; sourceTree = "<group>"; };
 		55BC6EF018F331B1008B7E12 /* DVDPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVDPlayback.framework; path = System/Library/Frameworks/DVDPlayback.framework; sourceTree = SDKROOT; };
 		55BC6EF218F331B9008B7E12 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -133,8 +137,9 @@
 				55BC6EC918F3307F008B7E12 /* AppDelegate.m */,
 				55BC6EEA18F3319A008B7E12 /* RiffObject.h */,
 				55BC6EEB18F3319A008B7E12 /* RiffObject.m */,
-				55BC6EEC18F3319A008B7E12 /* RiffSyncObject.h */,
-				55BC6EED18F3319A008B7E12 /* RiffSyncObject.m */,
+				5540D3C61AC270F0002B7FCD /* RiffObject.swift */,
+				5540D3C81AC2712C002B7FCD /* RiffSyncController.swift */,
+				5540D3CA1AC31812002B7FCD /* DVDSwiftBridge.swift */,
 				55BC6ECB18F3307F008B7E12 /* MainMenu.xib */,
 				55BC6ECE18F3307F008B7E12 /* Images.xcassets */,
 				55BC6EBD18F3307F008B7E12 /* Supporting Files */,
@@ -145,6 +150,7 @@
 		55BC6EBD18F3307F008B7E12 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5540D3C51AC270EF002B7FCD /* MacRiffPlayer-Bridging-Header.h */,
 				55BC6EBE18F3307F008B7E12 /* MacRiffPlayer-Info.plist */,
 				55BC6EBF18F3307F008B7E12 /* InfoPlist.strings */,
 				55BC6EC218F3307F008B7E12 /* main.m */,
@@ -270,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5540D3C71AC270F0002B7FCD /* RiffObject.swift in Sources */,
+				5540D3C91AC2712C002B7FCD /* RiffSyncController.swift in Sources */,
 				55BC6EEE18F3319A008B7E12 /* RiffObject.m in Sources */,
+				5540D3CB1AC31812002B7FCD /* DVDSwiftBridge.swift in Sources */,
 				55BC6ECA18F3307F008B7E12 /* AppDelegate.m in Sources */,
-				55BC6EEF18F3319A008B7E12 /* RiffSyncObject.m in Sources */,
 				55BC6EC318F3307F008B7E12 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -397,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -406,11 +414,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = RiffApp;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MacRiffPlayer/MacRiffPlayer-Prefix.pch";
 				INFOPLIST_FILE = "MacRiffPlayer/MacRiffPlayer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MacRiffPlayer/MacRiffPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -419,11 +431,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = RiffApp;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MacRiffPlayer/MacRiffPlayer-Prefix.pch";
 				INFOPLIST_FILE = "MacRiffPlayer/MacRiffPlayer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MacRiffPlayer/MacRiffPlayer-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
