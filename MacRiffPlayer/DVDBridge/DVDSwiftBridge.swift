@@ -12,223 +12,221 @@ import Security.Authorization
 
 class DVD {
 	enum Menu: UInt32 {
-		case Title
-		case Root
-		case SubPicture
-		case Audio
-		case Angle
-		case PTT
-		case None
+		case title
+		case root
+		case subPicture
+		case audio
+		case angle
+		case ptt
+		case none
 	}
 	
 	enum State: OSStatus {
-		case Unknown
+		case unknown
 		
 		/// playing 1x or less (slow mo)
-		case Playing
-		case PlayingStill
+		case playing
+		case playingStill
 		/// pause and step frame
-		case Paused
+		case paused
 		
 		///the DVDEvent for stopping has a 2nd parameter to indicate that the stop was initiated by the DVD disc.
 		///0: user, 1: disc initiated
-		case Stopped
+		case stopped
 		
 		/// playing greater than 1x
-		case Scanning
+		case scanning
 		
-		case Idle
+		case idle
 		
 		/// playing less than 1x
-		case PlayingSlow
+		case playingSlow
 	}
 	
 	///DVDErrorCode - Errors returned by the framework (`-70000` to `-70099`)
 	enum ErrorCode: OSStatus {
 		///No Error encountered
-		case NoErr = 0
+		case noErr = 0
 		
 		/// Catch all error
-		case Unknown = -70001
+		case unknown = -70001
 		
 		/// There was an error initializing the playback framework
-		case InitializingLib = -70002
+		case initializingLib = -70002
 		
 		/// The playback framework has not been initialized.
-		case UninitializedLib = -70003
+		case uninitializedLib = -70003
 		
 		/// action is not allowed during playback
-		case NotAllowedDiringPlayback = -70004
+		case notAllowedDiringPlayback = -70004
 		
 		///A grafport was not set.
-		case UnassignedGrafPort			= -70005
+		case unassignedGrafPort			= -70005
 		
 		/// Media is already being played.
-		case AlreadyPlaying				= -70006
+		case alreadyPlaying				= -70006
 		
 		/// The application did not install a callback routine for fatal errors returned by the framework.
-		case NoFatalErrCallBack			= -70007
+		case noFatalErrCallBack			= -70007
 		
 		///The framework has already been notified to sleep.
-		case IsAlreadySleeping			= -70008
+		case isAlreadySleeping			= -70008
 		
 		///DVDWakeUp was called when the framework was not asleep.
-		case DontNeedWakeup				= -70009
+		case dontNeedWakeup				= -70009
 		
 		///Time code is outside the valid range for the current title.
-		case TimeOutOfRange				= -70010
+		case timeOutOfRange				= -70010
 		
 		///The operation was not allowed by the media at this time.
-		case UserActionNoOp				= -70011
+		case userActionNoOp				= -70011
 		
 		///The DVD drive is not available.
-		case MissingDrive				= -70012
+		case missingDrive				= -70012
 		
 		///The current system configuration is not supported.
-		case NotSupportedConfiguration	= -70013
+		case notSupportedConfiguration	= -70013
 		
 		///The operation is not supported. For example, trying to slow mo backwards.
-		case NotSupportedFunction		= -70014
+		case notSupportedFunction		= -70014
 		
 		///The media was not valid for playback.
-		case NoValidMedia				= -70015
+		case noValidMedia				= -70015
 		
 		///The invalid parameter was passed.
-		case WrongParam					= -70016
+		case wrongParam					= -70016
 		
 		///A valid graphics device is not available.
-		case MissingGraphicsDevice		= -70017
+		case missingGraphicsDevice		= -70017
 		
 		///A graphics device error was encountered.
-		case GraphicsDevice				= -70018
+		case graphicsDevice				= -70018
 		
 		///The framework is already open (probably by another process).
-		case PlaybackOpen				= -70019
+		case playbackOpen				= -70019
 		
 		///The region code was not valid.
-		case InvalidRegionCode			= -70020
+		case invalidRegionCode			= -70020
 		
 		///The region manager was not properly installed or missing from the system.
-		case RgnMgrInstall				= -70021
+		case rgnMgrInstall				= -70021
 		
 		///The disc region code and the drive region code do not match.
-		case MismatchedRegionCode		= -70022
+		case mismatchedRegionCode		= -70022
 		
 		///The drive does not have any region changes left.
-		case NoMoreRegionSets			= -70023
+		case noMoreRegionSets			= -70023
 		
 		///The drive region code was not initialized.
 		case dRegionCodeUninitialized	= -70024
 		
 		///The user attempting to change the region code could not be authenticated.
-		case Authentification			= -70025
+		case authentification			= -70025
 		
 		///The video driver does not have enough video memory available to playback the media.
-		case OutOfVideoMemory			= -70026
+		case outOfVideoMemory			= -70026
 		
 		///An appropriate audio output device could not be found.
-		case NoAudioOutputDevice		= -70027
+		case noAudioOutputDevice		= -70027
 		
 		///A system error was encountered.
-		case System						= -70028
+		case system						= -70028
 		
 		///The user has made a selection not supported in the current menu.
-		case Navigation					= -70029
+		case navigation					= -70029
 		
 		///invalid bookmark version
-		case InvalidBookmarkVersion		= -70030
+		case invalidBookmarkVersion		= -70030
 		
 		///invalid bookmark size
-		case InvalidBookmarkSize		= -70031
+		case invalidBookmarkSize		= -70031
 		
 		///invalid bookmark for media
-		case InvalidBookmarkForMedia	= -70032
+		case invalidBookmarkForMedia	= -70032
 		
 		///no valid last play bookmark
-		case NoValidBookmarkForLastPlay	= -70033
+		case noValidBookmarkForLastPlay	= -70033
 		
 		///invalid display authentication: e.g. HDCP failure, ...
-		case DisplayAuthentification	= -70034
+		case displayAuthentification	= -70034
 	}
 	
 	enum BoolOrError {
-		case Boolean(Bool)
-		case Error(ErrorCode)
+		case boolean(Bool)
+		case error(ErrorCode)
 	}
 	
 	///DVDAspectRatio - The current aspect ratio (could be different when on menus or in the body of the title).
 	enum AspectRatio: Int16 {
-		case Uninitialized
-		case Ratio4x3
-		case Ratio4x3PanAndScan
-		case Ratio16x9
-		case LetterBox
+		case uninitialized
+		case ratio4x3
+		case ratio4x3PanAndScan
+		case ratio16x9
+		case letterBox
 	}
 	
 	///DVDUserNavigation - The direction the user is trying to navigate on the menu.
 	enum UserNavigation: UInt32 {
-		case MoveUp = 1
-		case MoveDown
-		case MoveLeft
-		case MoveRight
-		case Enter
+		case moveUp = 1
+		case moveDown
+		case moveLeft
+		case moveRight
+		case enter
 	}
 	
 	///DVDScan Direction -	Direction of play (backward or forward). Backward is currently not supported.
 	enum ScanDirection: Int8 {
-		case Forward
-		case Backward
+		case forward
+		case backward
 	};
 	
 	
 	///DVDScanRate - The rate at which to scan (used with DVDScanDirection).
 	enum ScanRate: Int16 {
-		case OneEigth	= -8
-		case OneFourth	= -4
-		case OneHalf	= -2
-		case Rate1x		= 1
-		case Rate2x		= 2
-		case Rate4x		= 4
-		case Rate8x		= 8
-		case Rate16x	= 16
-		case Rate32x	= 32
+		case oneEigth	= -8
+		case oneFourth	= -4
+		case oneHalf	= -2
+		case rate1x		= 1
+		case rate2x		= 2
+		case rate4x		= 4
+		case rate8x		= 8
+		case rate16x	= 16
+		case rate32x	= 32
 	};
 
 	/// DVDFormat - The format of the title.
 	enum Format: Int16 {
-		case Uninitialized
-		case NTSC
-		case PAL
-		case NTSC_HDTV
-		case PAL_HDTV
+		case uninitialized
+		case ntsc
+		case pal
+		case ntsc_HDTV
+		case pal_HDTV
 	};
 	
 	///DVDAudioStreamFormat - The different possible audio stream formats.
 	enum AudioFormat: Int16 {
-		case Unknown
-		case AC3
-		case MPEG1
-		case MPEG2
-		case PCM
-		case DTS
-		case SDDS
-		case MLP
-		case DDPlus
-		case DTSHD
+		case unknown
+		case ac3
+		case mpeg1
+		case mpeg2
+		case pcm
+		case dts
+		case sdds
+		case mlp
+		case ddPlus
+		case dtshd
 	};
 
 	///DVDUOPCode - The DVD UOP code(s)...
-	struct UOPCode : RawOptionSetType {
+	struct UOPCode : OptionSet {
 		typealias RawValue = UInt32
-		private var value: RawValue = 0
+		fileprivate var value: RawValue = 0
 		init(_ value: RawValue) { self.value = value }
 		init(rawValue value: RawValue) { self.value = value }
 		init(nilLiteral: ()) { self.value = 0 }
-		static var allZeros: UOPCode { return self(0) }
-		static func fromMask(raw: RawValue) -> UOPCode { return self(raw) }
 		var rawValue: RawValue { return self.value }
 		
-		static var None: UOPCode { return self(0) }
+		static var None: UOPCode { return UOPCode(0) }
 		static var TimePlaySearch: UOPCode { return UOPCode(1 << 0) }
 		static var PTTPlaySearch: UOPCode { return UOPCode(1 << 1) }
 		static var TitlePlay: UOPCode { return UOPCode(1 << 2) }
@@ -260,55 +258,53 @@ class DVD {
 	
 	/// DVDRegionCode - The different possible region codes (used for both the disc and the drive).
 	enum RegionCode: UInt32 {
-		case Uninitialized	= 0xff
-		case Code1 			= 0xfe
-		case Code2 			= 0xfd
-		case Code3 			= 0xfb
-		case Code4 			= 0xf7
-		case Code5 			= 0xef
-		case Code6 			= 0xdf
-		case Code7 			= 0xbf
-		case Code8 			= 0x7f
+		case uninitialized	= 0xff
+		case code1 			= 0xfe
+		case code2 			= 0xfd
+		case code3 			= 0xfb
+		case code4 			= 0xf7
+		case code5 			= 0xef
+		case code6 			= 0xdf
+		case code7 			= 0xbf
+		case code8 			= 0x7f
 	};
 	
 	
 	/// DVDDomainCode - The DVD Domain code...
 	enum DomainCode: UInt32 {
 		///First Play Domain
-		case FPDomain		= 0
+		case fpDomain		= 0
 		
 		///Video Manager Menu Domain
-		case VMGMDomain		= 1
+		case vmgmDomain		= 1
 		
 		///Video Title Set Menu Domain
-		case VTSMDomain		= 2
+		case vtsmDomain		= 2
 		
 		///Title Domain
-		case TTDomain		= 3
+		case ttDomain		= 3
 		
 		///Stop State
-		case STOPDomain		= 4
+		case stopDomain		= 4
 		
 		///Audio Manager Menu Domain (DVD-Audio only, not used)
-		case AMGMDomain		= 5
+		case amgmDomain		= 5
 		
 		///Title Group Domain (DVD-Audio only, not used)
-		case TTGRDomain		= 6
+		case ttgrDomain		= 6
 	};
 
 	
 	/// DVDAudioMode - The supported audio output formats
-	struct AudioMode : RawOptionSetType {
+	struct AudioMode : OptionSet {
 		typealias RawValue = Int32
-		private var value: RawValue = 0
-		init(_ value: RawValue) { self.value = value }
+		fileprivate var value: RawValue = 0
+		fileprivate init(_ value: RawValue) { self.value = value }
 		init(rawValue value: RawValue) { self.value = value }
 		init(nilLiteral: ()) { self.value = 0 }
-		static var allZeros: AudioMode { return self(0) }
-		static func fromMask(raw: RawValue) -> AudioMode { return self(raw) }
 		var rawValue: RawValue { return self.value }
 		
-		static var Uninitialized: AudioMode { return self(0) }
+		static var Uninitialized: AudioMode { return AudioMode(0) }
 		static var ProLogic: AudioMode { return AudioMode(1 << 0) }
 		static var SPDIF: AudioMode { return AudioMode(1 << 1) }
 	}
@@ -318,101 +314,101 @@ class DVD {
 	//-----------------------------------------------------
 	enum EventCode: UInt32 {
 		/// Returned value1: Title
-		case Title				= 1
+		case title				= 1
 		
 		/// Returned value1: Chapter
-		case PTT				= 2
+		case ptt				= 2
 		
 		/// Returned value1: UOP code mask (DVDUOPCode)
-		case ValidUOP			= 3
+		case validUOP			= 3
 		
 		/// Returned value1: StreamID
-		case Angle				= 4
+		case angle				= 4
 		
 		/// Returned value1: StreamID
-		case AudioStream		= 5
+		case audioStream		= 5
 		
 		/// Returned value1: streamID  / (value2 != 0): visible
-		case SubpictureStream	= 6
+		case subpictureStream	= 6
 		
 		/// Returned value1: DVDAspectRatio
-		case DisplayMode		= 7
+		case displayMode		= 7
 		
 		/// Returned value1: DVDDomainCode
-		case Domain				= 8
+		case domain				= 8
 		
 		/// Returned value1: Bits / sec
-		case Bitrate			= 9
+		case bitrate			= 9
 		
 		/// Returned value1: On (1) - Off (0)
-		case Still				= 10
+		case still				= 10
 		
 		/// Returned value1: DVDState
-		case Playback			= 11
+		case playback			= 11
 		
 		/// Returned value1: DVDFormat
-		case VideoStandard		= 12
+		case videoStandard		= 12
 		
 		/// Returned value1: None (trigger for general stream change)
-		case Streams			= 13
+		case streams			= 13
 		
 		/// Returned value1: Speed (1x2x3x...)
-		case ScanSpeed			= 14
+		case scanSpeed			= 14
 		
 		/// Returned value1: DVDMenu
-		case MenuCalled			= 15
+		case menuCalled			= 15
 		
 		/// Returned value1: parental level number
-		case Parental			= 16
+		case parental			= 16
 		
 		/// Returned value1: PGC number
-		case PGC				= 17
+		case pgc				= 17
 		
 		/// Returned value1: GPRM index / value2: data
-		case GPRM				= 18
+		case gprm				= 18
 		
 		/// Returned value1: disc region
-		case RegionMismatch		= 19
+		case regionMismatch		= 19
 		
 		/// Returned value1: elapsed time / value2: duration of title [ms]
-		case TitleTime			= 20
+		case titleTime			= 20
 		
 		/// Returned value1: number of subpicture streams in title
-		case SubpictureStreamNumbers = 21
+		case subpictureStreamNumbers = 21
 		
 		/// Returned value1: number of audio streams in title
-		case AudioStreamNumbers = 22
+		case audioStreamNumbers = 22
 		
 		/// Returned value1: number of angles in title
-		case AngleNumbers 		= 23
+		case angleNumbers 		= 23
 		
 		/// Returned value1: DVDErrorCode
-		case Error		 		= 24
+		case error		 		= 24
 		
 		/// Returned value1: cc event opcode value2: cc event data
-		case CCInfo				= 25
+		case ccInfo				= 25
 		
 		/// Returned value1: elapsed time / value2: duration of current chapter [ms]
-		case ChapterTime		= 26
+		case chapterTime		= 26
 	}
 	
 	/// DVDTimeCode -	Used in conjunction with the DVDTimePosition to find an exact temporal location within the current title/chapter.
 	enum TimeCode: Int16 {
-		case Uninitialized
-		case ElapsedSeconds
-		case RemainingSeconds
+		case uninitialized
+		case elapsedSeconds
+		case remainingSeconds
 		
 		/// only useable for GetTime
-		case TitleDurationSeconds
+		case titleDurationSeconds
 		
 		/// only useable for GetTime
-		case ChapterElapsedSeconds
+		case chapterElapsedSeconds
 		
 		/// only useable for GetTime
-		case ChapterRemainingSeconds
+		case chapterRemainingSeconds
 		
 		/// only useable for GetTime
-		case ChapterDurationSeconds
+		case chapterDurationSeconds
 	}
 	
 	//typedef void	(*DVDFatalErrCallBackFunctionPtr)(DVDErrorCode inError, void *inRefCon);
@@ -421,18 +417,18 @@ class DVD {
 	//typedef void	(*DVDEventCallBackFunctionPtr)(DVDEventCode inEventCode, DVDEventValue inEventValue1, DVDEventValue inEventValue2, void *inRefCon);
 	typealias EventCallback = (EventCode, DVDEventValue, DVDEventValue) -> Void
 	
-	private(set) var lastError = ErrorCode.NoErr
-	init?(inout error: ErrorCode) {
+	fileprivate(set) var lastError = ErrorCode.noErr
+	init?(error: inout ErrorCode) {
 		if let anErr = ErrorCode(rawValue: DVDInitialize()) {
-			if anErr == .NoErr {
-				error = .NoErr
+			if anErr == .noErr {
+				error = .noErr
 				return
 			} else {
 				error = anErr
 				return nil
 			}
 		} else {
-			error = .Unknown
+			error = .unknown
 			return nil
 		}
 	}
@@ -441,51 +437,51 @@ class DVD {
 		DVDDispose()
 	}
 	
-	func validMedia(URL inRef: NSURL) -> BoolOrError {
-		var isValid: Boolean = 0
-		let iErr = DVDIsValidMediaURL(inRef, &isValid)
+	func validMedia(URL inRef: URL) -> BoolOrError {
+		var isValid: DarwinBoolean = false
+		let iErr = DVDIsValidMediaURL(inRef as CFURL, &isValid)
 		
 		if iErr == noErr {
-			return .Boolean(isValid != 0)
+			return .boolean(isValid.boolValue)
 		} else {
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
-			return .Error(ErrorCode(rawValue: iErr) ?? .Unknown)
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
+			return .error(ErrorCode(rawValue: iErr) ?? .unknown)
 		}
 	}
 	
 	func hasMedia() -> BoolOrError {
-		var isValid: Boolean = 0
+		var isValid: DarwinBoolean = false
 		let iErr = DVDHasMedia(&isValid)
 		
 		if iErr == noErr {
-			return .Boolean(isValid != 0)
+			return .boolean(isValid.boolValue)
 		} else {
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
-			return .Error(ErrorCode(rawValue: iErr) ?? .Unknown)
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
+			return .error(ErrorCode(rawValue: iErr) ?? .unknown)
 		}
 	}
 	
-	func openMediaFile(URL inFile: NSURL) -> ErrorCode {
-		let iErr = DVDOpenMediaFileWithURL(inFile)
-		lastError = ErrorCode(rawValue: iErr) ?? .Unknown
-		return ErrorCode(rawValue: iErr) ?? .Unknown
+	func openMediaFile(URL inFile: URL) -> ErrorCode {
+		let iErr = DVDOpenMediaFileWithURL(inFile as CFURL)
+		lastError = ErrorCode(rawValue: iErr) ?? .unknown
+		return ErrorCode(rawValue: iErr) ?? .unknown
 	}
 	
 	func closeMediaFile() -> ErrorCode {
-		let iErr = ErrorCode(rawValue: DVDCloseMediaFile()) ?? .Unknown
+		let iErr = ErrorCode(rawValue: DVDCloseMediaFile()) ?? .unknown
 		lastError = iErr
 		return iErr
 	}
 	
-	func openMediaVolume(URL inVolume: NSURL) -> ErrorCode {
-		let iErr = DVDOpenMediaVolumeWithURL(inVolume)
+	func openMediaVolume(URL inVolume: URL) -> ErrorCode {
+		let iErr = DVDOpenMediaVolumeWithURL(inVolume as CFURL)
 		
-		lastError = ErrorCode(rawValue: iErr) ?? .Unknown
-		return ErrorCode(rawValue: iErr) ?? .Unknown
+		lastError = ErrorCode(rawValue: iErr) ?? .unknown
+		return ErrorCode(rawValue: iErr) ?? .unknown
 	}
 	
 	func closeMediaVolume() -> ErrorCode {
-		let iErr = ErrorCode(rawValue: DVDCloseMediaVolume()) ?? .Unknown
+		let iErr = ErrorCode(rawValue: DVDCloseMediaVolume()) ?? .unknown
 		lastError = iErr
 		return iErr
 	}
@@ -494,46 +490,46 @@ class DVD {
 		get {
 			var tmp: CGDirectDisplayID = 0
 			
-			lastError = ErrorCode(rawValue: DVDGetVideoDisplay(&tmp)) ?? .Unknown
+			lastError = ErrorCode(rawValue: DVDGetVideoDisplay(&tmp)) ?? .unknown
 			return tmp
 		}
 		set {
-			lastError = ErrorCode(rawValue: DVDSetVideoDisplay(newValue)) ?? .Unknown
+			lastError = ErrorCode(rawValue: DVDSetVideoDisplay(newValue)) ?? .unknown
 		}
 	}
 	
-	func isDisplaySupported(inDisplay: CGDirectDisplayID) -> BoolOrError {
-		var outSupported: Boolean = 0
+	func isDisplaySupported(_ inDisplay: CGDirectDisplayID) -> BoolOrError {
+		var outSupported: DarwinBoolean = false
 		let iErr = DVDIsSupportedDisplay(inDisplay, &outSupported)
 		
 		if iErr == noErr {
-			return .Boolean(outSupported != 0)
+			return .boolean(outSupported.boolValue)
 		} else {
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
-			return .Error(ErrorCode(rawValue: iErr) ?? .Unknown)
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
+			return .error(ErrorCode(rawValue: iErr) ?? .unknown)
 		}
 	}
 	
-	func switchToDisplay(inDisplay: CGDirectDisplayID) -> BoolOrError {
-		var outSupported: Boolean = 0
+	func switchToDisplay(_ inDisplay: CGDirectDisplayID) -> BoolOrError {
+		var outSupported: DarwinBoolean = false
 		let iErr = DVDSwitchToDisplay(inDisplay, &outSupported)
 		
 		if iErr == noErr {
-			return .Boolean(outSupported != 0)
+			return .boolean(outSupported.boolValue)
 		} else {
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
-			return .Error(ErrorCode(rawValue: iErr) ?? .Unknown)
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
+			return .error(ErrorCode(rawValue: iErr) ?? .unknown)
 		}
 	}
 	
 	var videoWindowID: UInt32 {
 		get {
 			var tmp: UInt32 = 0
-			lastError = ErrorCode(rawValue: DVDGetVideoWindowID(&tmp)) ?? .Unknown
+			lastError = ErrorCode(rawValue: DVDGetVideoWindowID(&tmp)) ?? .unknown
 			return tmp
 		}
 		set {
-			lastError = ErrorCode(rawValue: DVDSetVideoWindowID(newValue)) ?? .Unknown
+			lastError = ErrorCode(rawValue: DVDSetVideoWindowID(newValue)) ?? .unknown
 		}
 	}
 	
@@ -542,59 +538,59 @@ class DVD {
 		var tmpHeight: UInt16 = 0
 		
 		let iErr = DVDGetNativeVideoSize(&tmpWidth, &tmpHeight)
-		lastError = ErrorCode(rawValue: iErr) ?? .Unknown
+		lastError = ErrorCode(rawValue: iErr) ?? .unknown
 		
 		return (tmpWidth, tmpHeight)
 	}
 	
 	var aspectRatio: AspectRatio {
 		get {
-			var tmpRat: DVDAspectRatio = 0
+			var tmpRat: DVDAspectRatio = .ratioUninitialized
 			let iErr = DVDGetAspectRatio(&tmpRat)
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
 			
-			return AspectRatio(rawValue: tmpRat) ?? .Uninitialized
+			return AspectRatio(rawValue: tmpRat.rawValue) ?? .uninitialized
 		}
 		set {
-			let iErr = DVDSetAspectRatio(newValue.rawValue)
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
+			let iErr = DVDSetAspectRatio(DVDAspectRatio(rawValue: newValue.rawValue)!)
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
 		}
 	}
 	
 	var formatStandard: Format? {
-		var aForm: DVDFormat = 0
+		var aForm: DVDFormat = .uninitialized
 		let iErr = DVDGetFormatStandard(&aForm)
-		lastError = ErrorCode(rawValue: iErr) ?? .Unknown
+		lastError = ErrorCode(rawValue: iErr) ?? .unknown
 		
-		return Format(rawValue: aForm)
+		return Format(rawValue: aForm.rawValue)
 	}
 	
 	var videoBounds: CGRect {
 		get {
 			var toRet = CGRect()
 			let iErr = DVDGetVideoCGBounds(&toRet)
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
 			
 			return toRet
 		}
 		set {
 			var toSet = newValue
 			let iErr = DVDSetVideoCGBounds(&toSet)
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
 		}
 	}
 	
 	var videoWindowRef: WindowRef {
 		get {
-			var inWinRef: WindowRef = nil
-			let iErr = DVDGetVideoWindowRef(&inWinRef)
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
+			var inWinRef: WindowRef? = nil
+			let iErr = DVDGetVideoWindowRef(&inWinRef!)
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
 			
-			return inWinRef
+			return inWinRef!
 		}
 		set {
 			let iErr = DVDSetVideoWindowRef(newValue)
-			lastError = ErrorCode(rawValue: iErr) ?? .Unknown
+			lastError = ErrorCode(rawValue: iErr) ?? .unknown
 		}
 	}
 	/*

@@ -9,16 +9,16 @@
 import Foundation
 
 class RiffObject: NSObject {
-	let riffAudioURL: NSURL
-	private(set) var riffSyncURL: NSURL?
-	private(set) var hasSync: Bool
-	private(set) var riffInfo: (delay: NSTimeInterval, start: NSTimeInterval, timeOffset: Double, title: UInt16) = (0,0,0,0)
+	let riffAudioURL: URL
+	fileprivate(set) var riffSyncURL: URL?
+	fileprivate(set) var hasSync: Bool
+	fileprivate(set) var riffInfo: (delay: TimeInterval, start: TimeInterval, timeOffset: Double, title: UInt16) = (0,0,0,0)
 
-	var riffDelay: NSTimeInterval {
+	var riffDelay: TimeInterval {
 		return riffInfo.delay
 	}
 	
-	var riffStart: NSTimeInterval {
+	var riffStart: TimeInterval {
 		return riffInfo.start
 	}
 	
@@ -30,50 +30,59 @@ class RiffObject: NSObject {
 		return riffInfo.title
 	}
 	
-	init(fileURL: NSURL) {
+	init(fileURL: URL) {
 		riffAudioURL = fileURL
-		var aRiffSyncURL: NSURL = {
-			return fileURL.URLByDeletingPathExtension!.URLByAppendingPathExtension("sync")
+		let aRiffSyncURL: URL = {
+			return fileURL.deletingPathExtension().appendingPathExtension("sync")
 		}()
 		
-		riffSyncURL = aRiffSyncURL.checkResourceIsReachableAndReturnError(nil) ? aRiffSyncURL : nil
+			do {
+				let isReached = try aRiffSyncURL.checkResourceIsReachable()
+				if isReached {
+					riffSyncURL = aRiffSyncURL
+				} else {
+					riffSyncURL = nil
+				}
+			} catch {
+				riffSyncURL = nil
+		}
 		
 		if riffSyncURL == nil {
 			hasSync = false
 		} else {
-			var theEncoding = NSUTF8StringEncoding
-			if let syncString = String(contentsOfURL: riffSyncURL!, usedEncoding: &theEncoding, error: nil) {
+			var theEncoding = String.Encoding.utf8
+			if let syncString = try? String(contentsOf: riffSyncURL!, usedEncoding: &theEncoding) {
 				var isValid = 0
-				let fileVals = syncString.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+				let fileVals = syncString.components(separatedBy: CharacterSet.newlines)
 				for aVar in fileVals {
-					if let currentRange = aVar.rangeOfString("=") {
-						var preRangeStr = aVar[aVar.startIndex..<currentRange.startIndex]
-						var afterRangeStr = aVar[currentRange.endIndex..<aVar.endIndex]
+					if let currentRange = aVar.range(of: "=") {
+						let preRangeStr = aVar[aVar.startIndex..<currentRange.lowerBound]
+						let afterRangeStr = aVar[currentRange.upperBound..<aVar.endIndex]
 						
 						switch preRangeStr {
 						case "riffdelay_init":
-							let numScanner = NSScanner(string: afterRangeStr)
+							let numScanner = Scanner(string: afterRangeStr)
 							var aDouble: Double = 0
 							numScanner.scanDouble(&aDouble)
 							riffInfo.delay = aDouble
-							isValid++
+							isValid += 1
 							
 						case "riffstart":
-							let numScanner = NSScanner(string: afterRangeStr)
+							let numScanner = Scanner(string: afterRangeStr)
 							var aDouble: Double = 0
 							numScanner.scanDouble(&aDouble)
 							riffInfo.start = aDouble
-							isValid++
+							isValid += 1
 
 						case "time_offset":
-							let numScanner = NSScanner(string: afterRangeStr)
+							let numScanner = Scanner(string: afterRangeStr)
 							var aDouble: Double = 0
 							numScanner.scanDouble(&aDouble)
 							riffInfo.timeOffset = aDouble
-							isValid++
+							isValid += 1
 							
 						case "title_ID":
-							riffInfo.title = UInt16(afterRangeStr.toInt() ?? 0)
+							riffInfo.title = UInt16(Int(afterRangeStr) ?? 0)
 							
 						default:
 							break

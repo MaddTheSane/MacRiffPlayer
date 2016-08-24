@@ -3,6 +3,19 @@
     {
       "idiom" : "universal",
       "filename" : "PauseTemplate.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Pause.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

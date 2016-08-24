@@ -10,6 +10,7 @@
 		5540D3C71AC270F0002B7FCD /* RiffObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540D3C61AC270F0002B7FCD /* RiffObject.swift */; };
 		5540D3C91AC2712C002B7FCD /* RiffSyncController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540D3C81AC2712C002B7FCD /* RiffSyncController.swift */; };
 		5540D3CB1AC31812002B7FCD /* DVDSwiftBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540D3CA1AC31812002B7FCD /* DVDSwiftBridge.swift */; };
+		5540D3CE1AC33AD4002B7FCD /* DVDCallbackBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5540D3CD1AC33AD4002B7FCD /* DVDCallbackBridge.m */; };
 		55BC6EB718F3307F008B7E12 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BC6EB618F3307F008B7E12 /* Cocoa.framework */; };
 		55BC6EC118F3307F008B7E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55BC6EBF18F3307F008B7E12 /* InfoPlist.strings */; };
 		55BC6EC318F3307F008B7E12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC6EC218F3307F008B7E12 /* main.m */; };
@@ -41,6 +42,8 @@
 		5540D3C61AC270F0002B7FCD /* RiffObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffObject.swift; sourceTree = "<group>"; };
 		5540D3C81AC2712C002B7FCD /* RiffSyncController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffSyncController.swift; sourceTree = "<group>"; };
 		5540D3CA1AC31812002B7FCD /* DVDSwiftBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDSwiftBridge.swift; sourceTree = "<group>"; };
+		5540D3CD1AC33AD4002B7FCD /* DVDCallbackBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDCallbackBridge.m; sourceTree = "<group>"; };
+		5540D3CF1AC33AE0002B7FCD /* DVDCallbackBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVDCallbackBridge.h; sourceTree = "<group>"; };
 		55BC6EB318F3307F008B7E12 /* MacRiffPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRiffPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BC6EB618F3307F008B7E12 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		55BC6EB918F3307F008B7E12 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +92,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5540D3CC1AC33A1D002B7FCD /* DVD Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				5540D3CA1AC31812002B7FCD /* DVDSwiftBridge.swift */,
+				5540D3CF1AC33AE0002B7FCD /* DVDCallbackBridge.h */,
+				5540D3CD1AC33AD4002B7FCD /* DVDCallbackBridge.m */,
+			);
+			name = "DVD Bridging";
+			path = DVDBridge;
+			sourceTree = "<group>";
+		};
 		55BC6EAA18F3307F008B7E12 = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +153,7 @@
 				55BC6EEB18F3319A008B7E12 /* RiffObject.m */,
 				5540D3C61AC270F0002B7FCD /* RiffObject.swift */,
 				5540D3C81AC2712C002B7FCD /* RiffSyncController.swift */,
-				5540D3CA1AC31812002B7FCD /* DVDSwiftBridge.swift */,
+				5540D3CC1AC33A1D002B7FCD /* DVD Bridging */,
 				55BC6ECB18F3307F008B7E12 /* MainMenu.xib */,
 				55BC6ECE18F3307F008B7E12 /* Images.xcassets */,
 				55BC6EBD18F3307F008B7E12 /* Supporting Files */,
@@ -225,6 +239,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "C.W. Betts";
 				TargetAttributes = {
+					55BC6EB218F3307F008B7E12 = {
+						LastSwiftMigration = 0800;
+					};
 					55BC6ED318F3307F008B7E12 = {
 						TestTargetID = 55BC6EB218F3307F008B7E12;
 					};
@@ -276,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5540D3CE1AC33AD4002B7FCD /* DVDCallbackBridge.m in Sources */,
 				5540D3C71AC270F0002B7FCD /* RiffObject.swift in Sources */,
 				5540D3C91AC2712C002B7FCD /* RiffSyncController.swift in Sources */,
 				55BC6EEE18F3319A008B7E12 /* RiffObject.m in Sources */,
@@ -423,6 +441,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MacRiffPlayer/MacRiffPlayer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -439,6 +458,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MacRiffPlayer/MacRiffPlayer-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

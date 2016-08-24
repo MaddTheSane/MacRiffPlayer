@@ -3,3 +3,4 @@
 //
 
 #include <DVDPlayback/DVDPlayback.h>
+#import "DVDCallbackBridge.h"
